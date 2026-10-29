@@ -1,0 +1,102 @@
+/* margin, padding 0 */
+body, .judul, .intruksi, .inputAngka, .tombolTebak, .keteranganTebakan{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* centering container */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(54, 148, 255);
+}
+
+.container{
+    background-color: white;
+    min-width: 400px;
+    min-height: 300px;
+
+    /* centering kebawah */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    /* padding: 2px; */
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.judul{
+    /* border: 1px solid black; */
+    font-size: 22px;
+    color: rgb(75, 75, 75);
+}
+
+.intruksi{
+    /* border: 1px solid red; */
+    font-size: 15px;
+    color: rgb(100, 100, 100);
+    text-align: center;
+}
+
+.formTebakan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.inputAngka{
+    font-size: 25px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    field-sizing: content;
+    
+    border: none;
+    border-bottom: 3px solid rgb(220, 220, 220);
+
+    color: rgb(120, 120, 120);
+
+    outline: none;
+}
+
+.inputAngka:focus{
+    border-bottom: 3px solid rgb(200, 200, 200);
+    color: rgb(0, 0, 0);
+}
+
+.tombolTebak{
+    border: none;
+    background-color: rgb(54, 148, 255);
+    border-radius: 6px;
+    color: white;
+
+    width: max-content;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 40px;
+}
+
+.tombolTebak:hover{
+    background-color: rgb(21, 130, 255);
+    cursor: pointer;
+}
+
+.tombolTebak:active{
+    scale: 1.05;
+}
+
+.inputAngka:disabled, .tombolTebak:disabled{
+    background-color: rgb(200, 200, 200);
+    border-radius: 5px;
+}
+
+.keteranganTebakan{
+    font-size: 15px;
+    color: rgb(170, 170, 170);
+}
