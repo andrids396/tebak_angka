@@ -4,6 +4,7 @@ const tombolTebak = document.querySelector("#tombolTebak");
 const keteranganTebakan = document.querySelector("#keteranganTebakan");
 const intruksi = document.querySelector(".intruksi");
 const formTebakan = document.querySelector("#formTebakan");
+const tombolAngka = document.querySelectorAll(".tombolAngka");
 
 // --- membuat angka acak antara 1 sampai 100
 function membuatAngkaAcak(){
@@ -89,3 +90,17 @@ setTimeout(()=>{
     tombolTebak.disabled = false;
     document.getElementById("inputAngka").focus();
 }, 1200);
+
+// listener tombol angka
+tombolAngka.forEach(function(tombol){
+    tombol.addEventListener("click", function(){
+        // ambil angka
+        const angka = this.getAttribute("angka");
+
+        inputAngka.value = inputAngka.value + angka;
+        inputAngka.focus();
+
+        keteranganTebakan.innerHTML = "Belum menebak!!!";
+        keteranganTebakan.style.color = "rgb(170, 170, 170)";
+    });
+})
